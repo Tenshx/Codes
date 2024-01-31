@@ -10,17 +10,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FlexBox Gallery</title>
     <style type="text/css">
+
+    	/* PS: bg from https://alvarotrigo.com/blog/animated-backgrounds-css/ */
+
+    	@keyframes color {
+  		0%   { background: #33CCCC; }
+  		20%  { background: #33CC36; }
+  		40%  { background: #B8CC33; }
+  		60%  { background: #FCCA00; }
+ 		80%  { background: #33CC36; }
+ 		100% { background: #33CCCC; }
+		}
+
+		body {
+  		background: #33CCCC;
+  		animation: color 9s infinite linear;
+  		text-align: center;
+		}
+
         h1 {
-            color: white;
-            font-size: 20px;
+            color: black;
+            font-size: 30px;
+        }
+
+        h2 {
+        	text-align: center;
+        	margin: 10px 0 10px 0;
+        	font-size: 50px;
+        }
+
+        h5, p {
+        	margin: 10px 10px 10px 10px;
         }
 
         .header {
-            background: black;
+            background: whitesmoke;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 50px;
+            height: 100px;
             margin-bottom: 20px;
         }
 
@@ -28,34 +56,35 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            align-items: center;	
         }
 
         .picture {
-            width: 20%;
-    		max-width: 20%;
-    		margin: 0 2%;
-    		margin-bottom: 20px;
-    		border-radius: 15px;
-    		position: relative;
+        	width: 400px;
+        	height: 20%;
+        	margin: 10px;
+        	border-radius: 10px;
+    		background-color: whitesmoke;
         }
 
         .picture img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 15px;
+            border-radius: 10px 10px 0 0;
         }
 
         .button {
-            width: 100%;
+            width: 20%;
             background-color: #4CAF50;
             border: none;
             color: white;
             padding: 10px;
             text-align: center;
-            font-size: 16px;
+            font-size: 12px;
             cursor: pointer;
+            border-radius: 5px;
+            margin: 0 0 10px 10px;
         }
     </style>
 </head>
@@ -65,106 +94,187 @@
         <h1>Kutse</h1>
     </div>
 
+    <h2>CSS FLEXBOX GALLERY</h2>
+
     <div class="content">
         <div class="picture">
             <img src="https://images.unsplash.com/photo-1516298252535-cf2ac5147f9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww" alt="image 1">
+            <h5>Image Title</h5>
             <p>*Insert text here*</p>
-            <button class="button">Click Me</button> 
+            <a href="https://images.unsplash.com/photo-1516298252535-cf2ac5147f9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3BvcnRzJTIwY2FyfGVufDB8fDB8fHww">
+            <button class="button">Click Me</button>
+        </a>
         </div>
+
         <div class="picture">
 			<img src="https://images.unsplash.com/photo-1628519592419-bf288f08cef5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D" alt="image 2">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1628519592419-bf288f08cef5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1626882767349-f70a34dbfbed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHIzNHxlbnwwfHwwfHx8MA%3D%3D" alt="image 3">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1626882767349-f70a34dbfbed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHIzNHxlbnwwfHwwfHx8MA%3D%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1623006772851-a8bf2c47d304?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D" alt="image 4">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1623006772851-a8bf2c47d304?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1549458395-e14f2e6d39c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D" alt="image 5">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1549458395-e14f2e6d39c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1561280612-f1c16d52999e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D" alt="image 6">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1561280612-f1c16d52999e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1620061769739-9eb7ae99046d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODh8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D" alt="image 7">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1620061769739-9eb7ae99046d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODh8fHNwb3J0cyUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1624001010212-f7bfd7cc74cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 8">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1624001010212-f7bfd7cc74cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1572917218478-f2b22c29489a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 9">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1572917218478-f2b22c29489a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1618160824610-6500d2c311f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI2fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 10">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1618160824610-6500d2c311f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI2fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1595785371554-eb445d0df6a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM1fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 11">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1595785371554-eb445d0df6a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM1fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1604150189430-d57c0398a850?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQzfHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 12">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1604150189430-d57c0398a850?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQzfHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1622481178814-529856e39ba8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTcyfHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 13">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1622481178814-529856e39ba8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTcyfHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1591469690670-8ec5b0e4feab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc2fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 14">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1591469690670-8ec5b0e4feab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTc2fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1614699188247-3ddb1f213790?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjI4fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 15">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1614699188247-3ddb1f213790?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjI4fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1573583542949-1af90704f57e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU5fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 16">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1573583542949-1af90704f57e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU5fHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1594348512813-9b1338a6f930?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYyfHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D" alt="image 17">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1594348512813-9b1338a6f930?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjYyfHxzcG9ydHMlMjBjYXJ8ZW58MHx8MHx8fDA%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1566023767296-d229ef68147b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFnYW5pfGVufDB8fDB8fHww" alt="image 18">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1566023767296-d229ef68147b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFnYW5pfGVufDB8fDB8fHww">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1627454820516-dc767bcb4d3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a29lbmlnc2VnZ3xlbnwwfHwwfHx8MA%3D%3D" alt="image 19">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1627454820516-dc767bcb4d3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a29lbmlnc2VnZ3xlbnwwfHwwfHx8MA%3D%3D">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
+
 		<div class="picture">
 			<img src="https://images.unsplash.com/photo-1682428585246-e306a47c7867?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fG1hemRhJTIwcng3fGVufDB8fDB8fHww" alt="image 20">
+			<h5>Image Title</h5>
 			<p>*Insert text here*</p>
+			<a href="https://images.unsplash.com/photo-1682428585246-e306a47c7867?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fG1hemRhJTIwcng3fGVufDB8fDB8fHww">
 			<button class="button">Click Me</button>
+		</a>
 		</div>
     </div>
 
