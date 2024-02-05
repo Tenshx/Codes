@@ -10,23 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FlexBox Gallery</title>
     <style type="text/css">
-
-    	/* PS: bg from https://alvarotrigo.com/blog/animated-backgrounds-css/ */
-
-    	@keyframes color {
-  		0%   { background: #33CCCC; }
-  		20%  { background: #33CC36; }
-  		40%  { background: #B8CC33; }
-  		60%  { background: #FCCA00; }
- 		80%  { background: #33CC36; }
- 		100% { background: #33CCCC; }
-		}
-
-		body {
-  		background: #33CCCC;
-  		animation: color 9s infinite linear;
-  		text-align: center;
-		}
+    	body {
+    		background: #C9D6FF;
+		background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+		background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    	}
 
         h1 {
             color: black;
@@ -44,7 +32,9 @@
         }
 
         .header {
-            background: whitesmoke;
+        	background: #4568DC;
+			background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+			background: linear-gradient(to right, #B06AB3, #4568DC);
             display: flex;
             justify-content: center;
             align-items: center;
